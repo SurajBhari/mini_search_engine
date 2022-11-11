@@ -52,4 +52,4 @@ def query():
     heading_list = [x["headings"] for x in result]
     return render_template("query.html", show=True, url_list=url_list, heading_list=heading_list, query=query)
 
-app.run(host="0.0.0.0", port=5000, debug=True)
+app.run(host="0.0.0.0", port=2000, debug=True)
