@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>{{ query }}</title>
+<style>
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    background-color: #287dfc;
+}
+input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid #2d9fd9;
+    color: #a0d18c;
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+    }
+    
+input[type=text]:focus {
+    outline: none;
+    border: 1px solid #a0d18c;
+    color: #2d9fd9;
+}
+input[type=submit]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid #2d9fd9;
+    color: #a0d18c;
+    height: 30px;
+    padding-left: 10px;
+    }
+    
+input[type=submit]:focus {
+    outline: none;
+    border: 1px solid #a0d18c;
+    color: #2d9fd9;
+}
+
+</style>
+<title> {{query}} </title>
+</head>
+<body>
+<div style="text-align: center; margin-top: 50px;">
+    <div id="topbar">
+        <div id="topbar-inner">
+            <div id="topbar-logo">
+                <a href="https://www.google.com/">
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" />
+                </a>
+            </div>
+            {% block content %}
+            <div id="topbar-search">
+                <form action="query" method="post">
+                    <input type="text" id="query" placeholder={{query}} name="query" > <input type="submit" onclick="loading();" class="button"/> </p>
+                </form>
+            </div>
+            {% endblock %}
+            {% for i in range(url_list|length) %}
+            <a href = "{{ url_list[i] }}">{{ heading_list[i] }}</a>
+            </br>
+{% endfor %}
+
+</body>
+</html>

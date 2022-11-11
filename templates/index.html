@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>My First Web Page</title>
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<!-- Core theme CSS -->
+
+<style>
+    .loading {
+        visibility: hidden;
+    }
+    .query-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    body {
+        background-color: #287dfc;
+    }
+    
+
+    input[type=text]{
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        border: 1px solid #2d9fd9;
+        color: #a0d18c;
+        width: 250px;
+        height: 30px;
+        padding-left: 10px;
+        }
+        
+    input[type=text]:focus {
+        outline: none;
+        border: 1px solid #a0d18c;
+        color: #2d9fd9;
+    }
+    input[type=submit]{
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        border: 1px solid #2d9fd9;
+        color: #a0d18c;
+        height: 30px;
+        padding-left: 10px;
+        }
+        
+    input[type=submit]:focus {
+        outline: none;
+        border: 1px solid #a0d18c;
+        color: #2d9fd9;
+    }
+</style>
+<script type="text/javascript">
+    function loading(){
+        let l = document.getElementsByClassName("loading");
+        for (let i = 0; i < l.length; i++) {
+            l[i].style.visibility = "visible";
+        }
+        console.log("Loading");
+    }
+</script>
+</head>
+<body>
+    {% block content %}
+    <center>
+        <div class="query-box">
+            <form action="query" method="post">
+                <h2>A Basic Movie Search engine</h2>
+                <h2><i class="fas-solid fa-magnifying-glass"></i></h2>
+                
+                <p><input type="text" id="query" placeholder="Search" name="query" ><input type="submit" onclick="loading();" class="button"/> </p>
+            </form>
+        </div>
+    <div class="loading">
+        <img src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif" id="loading" alt="Loading" width="5%" height="5%" />
+    </div>
+    </center>
+    {% endblock %}
+</body>
+
+</html>
