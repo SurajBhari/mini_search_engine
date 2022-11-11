@@ -6,6 +6,12 @@ body {
     font-family: sans-serif;
     font-size: 12px;
     background-color: #287dfc;
+    color : #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
 }
 input[type=text]{
     -webkit-border-radius: 20px;
@@ -47,9 +53,7 @@ input[type=submit]:focus {
     <div id="topbar">
         <div id="topbar-inner">
             <div id="topbar-logo">
-                <a href="https://www.google.com/">
-                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" />
-                </a>
+
             </div>
             {% block content %}
             <div id="topbar-search">
@@ -59,7 +63,9 @@ input[type=submit]:focus {
             </div>
             {% endblock %}
             {% for i in range(url_list|length) %}
-            <a href = "{{ url_list[i] }}">{{ heading_list[i] }}</a>
+        </br></br></br></br></br>
+            <a href = "{{ url_list[i] }}"><h2> {{ heading_list[i] }}</h2></a>
+
             </br>
 {% endfor %}
 
