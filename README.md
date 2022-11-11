@@ -3,7 +3,7 @@
 SADELA SEARCH ENGINE
 
 how to run ?
-you don't xD still its hosted on http://suraj1436.site:2000
+you don't xD still its hosted on http://suraj1436.site:9000
 
 clone it 
 cd scrapingproject/scrapingproject/spiders && scrapy crawl ourfirstbot -o data.jl
