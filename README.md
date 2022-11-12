@@ -3,17 +3,17 @@
 SADELA SEARCH ENGINE
 
 how to run ?
-you don't xD still its hosted on http://suraj1436.site:9000
+its hosted on http://suraj1436.site:9000
 
-clone it 
-cd scrapingproject/scrapingproject/spiders && scrapy crawl ourfirstbot -o data.jl
-cd ..
-cd ..
-cd ..
-python cleaner.py
-python main.py
+clone it </br>
+cd scrapingproject/scrapingproject/spiders && scrapy crawl ourfirstbot -o data.jl</br>
+cd ..</br>
+cd ..</br>
+cd ..</br>
+python cleaner.py </br>
+python main.py </br>
 
-Prerequistes 
-flask
-scrapy
-jsonlines
+Prerequistes  </br>
+flask </br>
+scrapy</br>
+jsonlines</br>
