@@ -1,10 +1,11 @@
 import jsonlines
 
+
 def cleaner():
     known_urls = []
 
     never_known_urls = []
-    with jsonlines.open('scrapingproject/scrapingproject/spiders/data.jl') as jl:
+    with jsonlines.open("scrapingproject/scrapingproject/spiders/data.jl") as jl:
         while True:
             try:
                 data = jl.read()
@@ -16,6 +17,8 @@ def cleaner():
                 never_known_urls.append(data)
                 known_urls.append(data["url"])
                 print("Now knows about", len(known_urls), "unique urls")
-    with jsonlines.open('scrapingproject/scrapingproject/spiders/data.jl', mode='w') as jl:
+    with jsonlines.open(
+        "scrapingproject/scrapingproject/spiders/data.jl", mode="w"
+    ) as jl:
         for data in never_known_urls:
             jl.write(data)
